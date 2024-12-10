@@ -12,6 +12,12 @@ Install the Glicol CLI:
 cargo install --git https://github.com/glicol/glicol-cli.git
 ```
 
+Update the Glicol lib files (samples and help docs):
+
+```bash
+./updateLib.sh
+```
+
 ## Usage
 
 Play a Glicol file:
