@@ -23,10 +23,10 @@ Update the Glicol lib files (samples and help docs):
 Play a Glicol file:
 
 ```bash
-glicol-cli music/song_001.glicol
+glicol-cli music/track_001.glicol
 ```
 
-You can edit the `music/song_001.glicol` file to alter the music live.
+You can edit the `music/track_001.glicol` file to alter the music live.
 
 ## License
 

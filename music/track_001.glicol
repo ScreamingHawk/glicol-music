@@ -1,0 +1,15 @@
+~drum: speed 2.0 >> seq 60 _ 60 _ >> bd 0.2 >> mul 0.8
+~snare: speed 2.0 >> seq _ 60 _ 60 >> sn 0.2 >> mul 0.6 >> plate 0.1
+~hihat_l: speed 16.0 >> seq 60 >> hh 0.05 >> mul 0.2
+~hihat_r: speed 16.0 >> seq _ 60 >> hh 0.05 >> mul 0.2
+~crash: speed 1.0 >> seq _ _ 80 _ >> hh 0.8 >> mul 0.4 >> plate 0.3
+~bass: speed 2.0 >> seq 33 _33 36 _33 >> sawsynth 0.01 0.2 >> mul 1.2 >> lpf 500.0 1.0
+
+~a: choose 60 65 67 72
+~melody_l: speed 1.0 >> seq ~a _ 67 72 _ _67 _ _72 >> squsynth 0.01 0.1 >> mul 0.2 >> plate 0.2
+~melody_r: speed 1.0 >> seq _ ~a _ _ 65 _67 60 _ >> squsynth 0.01 0.1 >> mul 0.2 >> plate 0.2
+
+~stereo_hihat: balance ~hihat_l ~hihat_r
+~stereo_melody: balance ~melody_l ~melody_r
+
+out: mix ~drum ~snare ~stereo_hihat ~bass ~stereo_melody ~crash
