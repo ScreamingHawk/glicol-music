@@ -1,6 +1,12 @@
+<a href="https://music.standen.link">
+  <img src="public/logo.png" alt="Glicol Music Logo" width="200"/>
+</a>
+
 # Glicol Music
 
 Generative music created with [Glicol](https://glicol.org).
+
+🎵 Live at [music.standen.link](https://music.standen.link).
 
 ## Installation
 
