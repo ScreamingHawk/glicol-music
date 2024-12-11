@@ -1,3 +1,8 @@
+// Track 002
+// Copyright (c) 2024 Michael Standen
+// Licensed under MIT License
+// https://music.standen.link
+
 ~t1: speed 4.0 >> seq 60_ >> sp \openhh >> mul 0.5
 ~t2: speed 4.0 >> seq _60 >> sp \snare1 >> mul 0.5
 

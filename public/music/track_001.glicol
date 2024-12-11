@@ -1,3 +1,8 @@
+// Track 001
+// Copyright (c) 2024 Michael Standen
+// Licensed under MIT License
+// https://music.standen.link
+
 ~drum: speed 2.0 >> seq 60 _ 60 _ >> bd 0.2 >> mul 0.8
 ~snare: speed 2.0 >> seq _ 60 _ 60 >> sn 0.2 >> mul 0.6 >> plate 0.1
 ~hihat_l: speed 16.0 >> seq 60 >> hh 0.05 >> mul 0.2

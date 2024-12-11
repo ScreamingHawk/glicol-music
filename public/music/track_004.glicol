@@ -1,3 +1,8 @@
+// Track 004
+// Copyright (c) 2024 Michael Standen
+// Licensed under MIT License
+// https://music.standen.link
+
 // Main kick
 ~kick: speed 1.0 >> seq 60 _ _ 60 _ _ 60 60 >> sp \808bd >> mul 0.8
 // Offset snare
