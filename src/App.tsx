@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import { AudioControls } from './components/AudioControls'
 import { Editor } from './components/Editor'
-import { GlicolProvider } from './context/GlicolContext'
+import { GlicolProvider } from './providers/GlicolProvider'
 
 function App() {
   const [initialContent, setInitialContent] = useState('')

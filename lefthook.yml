@@ -10,3 +10,6 @@ pre-commit:
     types:
       glob: '*.{ts,tsx}'
       run: bun tsc --noEmit
+    build:
+      glob: '*.{ts,tsx}'
+      run: bun run build

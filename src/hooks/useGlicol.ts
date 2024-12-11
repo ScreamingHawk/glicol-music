@@ -1,5 +1,5 @@
 import { useContext } from 'react'
-import { GlicolContext } from '../context/GlicolContext'
+import { GlicolContext } from '../contexts/GlicolContext'
 
 export function useGlicol() {
   const context = useContext(GlicolContext)

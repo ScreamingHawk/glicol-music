@@ -1,6 +1,6 @@
 import Glicol from 'glicol'
 import { ReactNode, useEffect, useState } from 'react'
-import { GlicolContext, GlicolContextType } from './GlicolContext'
+import { GlicolContext, GlicolContextType } from '../contexts/GlicolContext'
 
 export function GlicolProvider({ children }: { children: ReactNode }) {
   const [state, setState] = useState<GlicolContextType>({
