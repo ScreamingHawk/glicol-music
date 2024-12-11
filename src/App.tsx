@@ -8,7 +8,7 @@ function App() {
   const [initialContent, setInitialContent] = useState('')
 
   useEffect(() => {
-    fetch('/music/track_001.glicol')
+    fetch('/music/track_003.glicol')
       .then((response) => response.text())
       .then((data) => setInitialContent(data))
       .catch((error) => console.error('Error loading file:', error))
