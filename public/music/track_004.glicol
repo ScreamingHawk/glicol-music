@@ -1,0 +1,23 @@
+// Main kick
+~kick: speed 1.0 >> seq 60 _ _ 60 _ _ 60 60 >> sp \808bd >> mul 0.8
+// Offset snare
+~snare: speed 1.0 >> seq _ 60 _ 60 >> sp \snare1 >> mul 0.6
+// Hi-hat
+~hihat: speed 2.0 >> seq 60 48 60 48 >> sp \hit1 >> mul 1.0
+
+// Random noises
+~v: choose 60 63 65 45 33
+~vox: speed 0.5 >> seq ~v _ ~v _ >> sp \talk1 >> mul 0.4
+
+// Ting ting
+~g: choose 60 63 64 65
+~fx_l: speed 2.0 >> seq ~g 60 60_60_ ~g >> sp \glass >> mul 0.3 >> plate 0.1
+~fx_r: speed 2.0 >> seq _ ~g 60_60_ ~g >> sp \glass >> mul 0.3 >> plate 0.1
+~fx: balance ~fx_l ~fx_r
+
+// Lead melody
+~m: choose 60 63 65 67 66 0
+~melody: speed 1.0 >> seq ~m _~m ~m 65 67 65 63 60 >> squsynth 0.01 0.2 >> lpf 1000 1.0 >> mul 0.4
+
+// Output
+out: mix ~kick ~snare ~hihat ~melody ~vox ~fx >> plate 0.1

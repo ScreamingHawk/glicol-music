@@ -20,6 +20,7 @@ export function GlicolProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     const instance = new Glicol({
+      loadSamples: true,
       onLoaded: () => {
         // Create a gain node and connect it
         const ctx = instance.audioContext

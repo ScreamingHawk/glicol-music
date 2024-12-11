@@ -1,0 +1,9 @@
+~t1: speed 4.0 >> seq 60_ >> sp \openhh >> mul 0.5
+~t2: speed 4.0 >> seq _60 >> sp \snare1 >> mul 0.5
+
+~a: choose 59 60 61
+~t3: seq 65_ _ 56_ _ _60 _~a _~a _60 >> sp \808clap
+>> mul 1.2
+
+out: mix ~t.. >> plate 0.1
+

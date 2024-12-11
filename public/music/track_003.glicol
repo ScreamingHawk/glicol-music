@@ -1,0 +1,19 @@
+~a: choose 60 60 67 72 72 64 64 71 71
+
+~more: squ 1.5 >> mul 0.25 >> add 0.75
+~mod: squ 0.25 >> mul 0.5 >> add ~more
+
+~gl: speed 4.0 >> seq ~a _ >> mul ~mod
+>> mul 1.5 >> sp \guitar
+>> lpf 1000.0 1.0 >> mul 0.6 >> plate 0.2
+~gr: speed 4.0 >> seq _ ~a >> mul ~mod
+>> mul 1.5 >> sp \guitar
+>> lpf 1000.0 1.0 >> mul 0.6 >> plate 0.2
+~t1: balance ~gl ~gr
+
+~clap: speed 1.0 >> seq __60_ __60_ __60_ __60_ >> sp \snare2 >> mul 0.5 >> plate 0.1
+~drumbd: seq 60 60 60 60 >> sp \808bd >> mul 1.2
+~x: choose 72 67 67 69
+~drumhh: speed 4.0 >> seq _ ~x >> mul 1.0 >> sp \closedhh
+
+out: mix ~drum.. ~clap >> plate 0.1 >> mix ~t..
