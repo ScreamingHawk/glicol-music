@@ -9,7 +9,12 @@ export function GlicolProvider({ children }: { children: ReactNode }) {
     gainNode: null,
     currentCode: '',
     setCurrentCode: (code: string) => {
-      setState((prev) => ({ ...prev, currentCode: code }))
+      setState((prev) => {
+        if (prev.glicol) {
+          prev.glicol.run(code)
+        }
+        return { ...prev, currentCode: code }
+      })
     },
   })
 
