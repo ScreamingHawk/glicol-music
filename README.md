@@ -4,29 +4,21 @@ Generative music created with [Glicol](https://glicol.org).
 
 ## Installation
 
-[Install Rust](https://www.rust-lang.org/tools/install).
+[Install Bun](https://bun.sh/docs/installation).
 
-Install the Glicol CLI:
-
-```bash
-cargo install --git https://github.com/glicol/glicol-cli.git
-```
-
-Update the Glicol lib files (samples and help docs):
+Install the dependencies:
 
 ```bash
-./updateLib.sh
+bun install
 ```
 
 ## Usage
 
-Play a Glicol file:
+Run the app:
 
 ```bash
-glicol-cli music/track_001.glicol
+bun run dev
 ```
-
-You can edit the `music/track_001.glicol` file to alter the music live.
 
 ## License
 
@@ -34,5 +26,7 @@ You can edit the `music/track_001.glicol` file to alter the music live.
 > Want to use this music in your own project?
 > It's free!
 > Please remember to respect the license by giving credit to [Michael Standen](https://michael.standen.link).
+
+All glicol music files are located in the `public/music` folder.
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
