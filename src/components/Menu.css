@@ -88,6 +88,14 @@
     top: auto;
     bottom: 20px;
   }
+  
+  .hamburger-icon span {
+    background: black;
+  }
+  
+  .hamburger-icon.open span {
+    background: white;
+  }
 }
 
 /* Add to your existing App.css */
