@@ -1,16 +1,16 @@
 pre-commit:
   parallel: false
   commands:
-    format:
+    01_format:
       # Using npx because bun has issues parsing command arguments in this context
       glob: '*.{ts,tsx,json,yml,yaml,md}'
       run: npx prettier --write {staged_files} && git add {staged_files}
-    lint:
-      glob: '*.{ts,tsx}'
-      run: bun eslint {staged_files}
-    types:
+    02_types:
       glob: '*.{ts,tsx}'
       run: bun tsc --noEmit
-    build:
+    03_lint:
       glob: '*.{ts,tsx}'
+      run: bun eslint {staged_files}
+    04_build:
+      glob: '*'
       run: bun run build
