@@ -1,0 +1,116 @@
+.menu {
+  position: fixed;
+  left: -250px;
+  top: 0;
+  width: 300px;
+  height: 100%;
+  background: #1a1a1a;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.menu.open {
+  left: 0;
+}
+
+.hamburger {
+  position: fixed;
+  left: 20px;
+  top: 20px;
+  z-index: 1001;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.hamburger-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
+}
+
+.hamburger-icon span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: white;
+  transition: all 0.3s ease;
+}
+
+.hamburger-icon.open span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger-icon.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-icon.open span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 60px 0 0 0;
+}
+
+.menu li {
+  padding: 15px 0;
+  color: white;
+  cursor: pointer;
+}
+
+.menu li:hover {
+  color: #666;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .menu {
+    width: 100%;
+    left: 0;
+    transform: translateX(-100%);
+    padding-left: calc(20px + env(safe-area-inset-left));
+    padding-right: calc(20px + env(safe-area-inset-right));
+  }
+  
+  .menu.open {
+    transform: translateX(0);
+    width: 100vw;
+  }
+  
+  .hamburger {
+    top: auto;
+    bottom: 20px;
+  }
+}
+
+/* Add to your existing App.css */
+.main-content {
+  transition: margin-left 0.3s ease;
+}
+
+.main-content.menu-open {
+  margin-left: 250px;
+}
+
+@media (max-width: 768px) {
+  .main-content.menu-open {
+    margin-left: 0;
+  }
+} 
+
+/* Add to existing Menu.css */
+.menu li.selected {
+  color: #4a9eff;
+  font-weight: bold;
+}
+
+.menu li.selected:hover {
+  color: #3182ce;
+}

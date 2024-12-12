@@ -6,10 +6,33 @@
   overflow: hidden;
 }
 
+.main-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  transition: margin-left 0.3s ease;
+  margin-left: 100px;
+}
+
+.main-content.menu-open {
+  margin-left: 250px;
+}
+
 .editor-container {
   flex: 1;
   display: flex;
   background-color: #f8f9fa;
   min-height: 0;
   width: 100%;
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 0;
+  }
+
+  .main-content.menu-open {
+    margin-left: 0;
+  }
 }
