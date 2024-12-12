@@ -78,21 +78,21 @@
     padding-left: calc(20px + env(safe-area-inset-left));
     padding-right: calc(20px + env(safe-area-inset-right));
   }
-  
+
   .menu.open {
     transform: translateX(0);
     width: 100vw;
   }
-  
+
   .hamburger {
     top: auto;
     bottom: 20px;
   }
-  
+
   .hamburger-icon span {
     background: black;
   }
-  
+
   .hamburger-icon.open span {
     background: white;
   }
@@ -111,7 +111,7 @@
   .main-content.menu-open {
     margin-left: 0;
   }
-} 
+}
 
 /* Add to existing Menu.css */
 .menu li.selected {
