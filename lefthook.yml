@@ -2,6 +2,7 @@ pre-commit:
   parallel: false
   commands:
     format:
+      # Using npx because bun has issues parsing command arguments in this context
       glob: '*.{ts,tsx,json,yml,yaml,md}'
       run: npx prettier --write {staged_files} && git add {staged_files}
     lint:
