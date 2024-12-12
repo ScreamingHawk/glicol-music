@@ -1,6 +1,6 @@
 import { FC } from 'react'
-import './Menu.css'
 import { Track } from '../config/tracks'
+import './Menu.css'
 
 interface MenuProps {
   isOpen: boolean
@@ -10,12 +10,12 @@ interface MenuProps {
   onTrackSelect: (trackId: string) => void
 }
 
-export const Menu: FC<MenuProps> = ({ 
-  isOpen, 
-  onToggle, 
-  tracks, 
-  selectedTrackId, 
-  onTrackSelect 
+export const Menu: FC<MenuProps> = ({
+  isOpen,
+  onToggle,
+  tracks,
+  selectedTrackId,
+  onTrackSelect,
 }) => {
   return (
     <>
@@ -29,7 +29,7 @@ export const Menu: FC<MenuProps> = ({
       <nav className={`menu ${isOpen ? 'open' : ''}`}>
         <ul>
           {tracks.map((track) => (
-            <li 
+            <li
               key={track.id}
               className={track.id === selectedTrackId ? 'selected' : ''}
               onClick={() => onTrackSelect(track.id)}
@@ -41,4 +41,4 @@ export const Menu: FC<MenuProps> = ({
       </nav>
     </>
   )
-} 
+}

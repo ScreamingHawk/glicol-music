@@ -2,9 +2,9 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import { AudioControls } from './components/AudioControls'
 import { Editor } from './components/Editor'
-import { GlicolProvider } from './providers/GlicolProvider'
 import { Menu } from './components/Menu'
 import { defaultTrackId, tracks } from './config/tracks'
+import { GlicolProvider } from './providers/GlicolProvider'
 
 function App() {
   const [initialContent, setInitialContent] = useState('')
@@ -12,7 +12,7 @@ function App() {
   const [selectedTrackId, setSelectedTrackId] = useState(defaultTrackId)
 
   useEffect(() => {
-    const track = tracks.find(t => t.id === selectedTrackId)
+    const track = tracks.find((t) => t.id === selectedTrackId)
     if (!track) return
 
     fetch(track.path)
@@ -29,8 +29,8 @@ function App() {
   return (
     <GlicolProvider>
       <div className="app">
-        <Menu 
-          isOpen={isMenuOpen} 
+        <Menu
+          isOpen={isMenuOpen}
           onToggle={() => setIsMenuOpen(!isMenuOpen)}
           tracks={tracks}
           selectedTrackId={selectedTrackId}
